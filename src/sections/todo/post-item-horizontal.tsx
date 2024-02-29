@@ -1,20 +1,18 @@
+import { useState } from 'react';
+import { Amplify } from 'aws-amplify';
+import { generateClient } from 'aws-amplify/api';
+import { getCurrentUser } from 'aws-amplify/auth';
+
 import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
 import Stack from '@mui/material/Stack';
 import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 
-import { Amplify } from 'aws-amplify';
-import { useState, useEffect } from 'react';
-import { generateClient } from 'aws-amplify/api';
-import { getCurrentUser } from 'aws-amplify/auth';
 import { CreateTodoInput } from 'src/API';
-
 import { listTodos } from 'src/graphql/queries';
 import { deleteTodo } from 'src/graphql/mutations';
-import { useRouter } from 'src/routes/hooks';
 import amplifyconfig from 'src/amplifyconfiguration.json';
-
 
 import Iconify from 'src/components/iconify';
 import TextMaxLine from 'src/components/text-max-line';
@@ -31,8 +29,6 @@ type Props = {
 
 export default function PostItemHorizontal({ post }: Props) {
   const popover = usePopover();
-
-  const router = useRouter();
 
   const {
     id,
@@ -56,11 +52,11 @@ export default function PostItemHorizontal({ post }: Props) {
     }
   };
 
-  const handleDeleteTodo = async (id: string) => {
+  const handleDeleteTodo = async (todoId: string) => {
     try {
       await client.graphql({
         query: deleteTodo,
-        variables: { input: { id } },
+        variables: { input: { id: todoId } },
       });
       await fetchTodo();
     } catch (error) {
@@ -118,7 +114,9 @@ export default function PostItemHorizontal({ post }: Props) {
         <MenuItem
           onClick={() => {
             popover.onClose();
-            handleDeleteTodo(id)
+            if (id === "string") {
+              handleDeleteTodo(id);
+            }
           }}
         >
           <Iconify icon="solar:check-square-linear" />

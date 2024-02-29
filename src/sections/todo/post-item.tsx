@@ -30,23 +30,46 @@ type Props = {
   index?: number;
 };
 
-export default function PostItem({ todo, index }: Props) {
+export default function PostItem({ post, index }: Props) {
   const theme = useTheme();
 
   const mdUp = useResponsive('up', 'md');
 
-  const { name, description, createdAt } = todo;
+  const { coverUrl, title, totalViews, totalComments, totalShares, author, createdAt } = post;
 
   const latestPost = index === 0 || index === 1 || index === 2;
 
   if (mdUp && latestPost) {
     return (
       <Card>
+        <Avatar
+          alt={author.name}
+          src={author.avatarUrl}
+          sx={{
+            top: 24,
+            left: 24,
+            zIndex: 9,
+            position: 'absolute',
+          }}
+        />
+
         <PostContent
-          name={name}
-          description={description}
+          title={title}
           createdAt={createdAt}
+          totalViews={totalViews}
+          totalShares={totalShares}
+          totalComments={totalComments}
           index={index}
+        />
+
+        <Image
+          alt={title}
+          src={coverUrl}
+          overlay={alpha(theme.palette.grey[900], 0.48)}
+          sx={{
+            width: 1,
+            height: 360,
+          }}
         />
       </Card>
     );
@@ -185,3 +208,4 @@ export function PostContent({
     </CardContent>
   );
 }
+

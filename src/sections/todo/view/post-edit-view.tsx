@@ -9,8 +9,6 @@ import { useGetPost } from 'src/api/blog';
 import { useSettingsContext } from 'src/components/settings';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 
-import PostNewEditForm from '../post-new-edit-form';
-
 // ----------------------------------------------------------------------
 
 type Props = {
@@ -44,7 +42,6 @@ export default function PostEditView({ title }: Props) {
         }}
       />
 
-      <PostNewEditForm currentPost={currentPost} />
     </Container>
   );
 }

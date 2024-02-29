@@ -11,8 +11,6 @@ import Markdown from 'src/components/markdown';
 import Scrollbar from 'src/components/scrollbar';
 import EmptyContent from 'src/components/empty-content';
 
-import PostDetailsHero from './post-details-hero';
-
 // ----------------------------------------------------------------------
 
 type Props = {
@@ -37,8 +35,6 @@ export default function PostDetailsPreview({
   isSubmitting,
 }: Props) {
   const hasContent = name || description;
-
-  const hasHero = name;
 
   return (
     <Dialog fullScreen open={open} onClose={onClose}>

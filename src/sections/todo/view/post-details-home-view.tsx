@@ -23,7 +23,6 @@ import Markdown from 'src/components/markdown';
 import EmptyContent from 'src/components/empty-content';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 
-import PostList from '../post-list';
 import PostCommentList from '../post-comment-list';
 import PostCommentForm from '../post-comment-form';
 import PostDetailsHero from '../post-details-hero';
@@ -38,7 +37,7 @@ type Props = {
 export default function PostDetailsHomeView({ title }: Props) {
   const { post, postError, postLoading } = useGetPost(title);
 
-  const { latestPosts, latestPostsLoading } = useGetLatestPosts(title);
+  const { latestPosts } = useGetLatestPosts(title);
 
   const renderSkeleton = <PostDetailsSkeleton />;
 
@@ -161,17 +160,9 @@ export default function PostDetailsHomeView({ title }: Props) {
   );
 
   const renderLatestPosts = (
-    <>
-      <Typography variant="h4" sx={{ mb: 5 }}>
+    <Typography variant="h4" sx={{ mb: 5 }}>
         Recent Posts
       </Typography>
-
-      <PostList
-        posts={latestPosts.slice(latestPosts.length - 4)}
-        loading={latestPostsLoading}
-        disabledIndex
-      />
-    </>
   );
 
   return (

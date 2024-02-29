@@ -6,7 +6,6 @@ import { CreateTodoInput } from "src/API";
 
 import Iconify from 'src/components/iconify';
 
-import PostItem from './post-item';
 import { PostItemSkeleton } from './post-skeleton';
 
 // ----------------------------------------------------------------------
@@ -30,11 +29,6 @@ export default function PostList({ todos, loading, disabledIndex }: Props) {
 
   const renderList = (
     <>
-      {todos.map((todo, index) => (
-        <Grid key={todo.id} xs={12} sm={6} md={!disabledIndex && index === 0 ? 6 : 3}>
-          <PostItem post={todo} index={!disabledIndex ? index : undefined} />
-        </Grid>
-      ))}
     </>
   );
 

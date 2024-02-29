@@ -66,12 +66,9 @@ export default function PostNewEditForm({ currentPost }: Props) {
 
   const {
     reset,
-    watch,
     handleSubmit,
-    formState: { isSubmitting, isValid },
+    formState: { isSubmitting },
   } = methods;
-
-  const values = watch();
 
   useEffect(() => {
     if (currentPost) {

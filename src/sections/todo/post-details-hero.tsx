@@ -17,11 +17,11 @@ import { bgGradient } from 'src/theme/css';
 
 import Iconify from 'src/components/iconify';
 
-import { ITodoHero } from 'src/types/blog';
+import { IPostHero } from 'src/types/blog';
 
 // ----------------------------------------------------------------------
 
-export default function PostDetailsHero({ name, createdAt }: ITodoHero) {
+export default function PostDetailsHero({ title, author, coverUrl, createdAt }: IPostHero) {
   const theme = useTheme();
 
   const smUp = useResponsive('up', 'sm');
@@ -50,7 +50,7 @@ export default function PostDetailsHero({ name, createdAt }: ITodoHero) {
             pt: { xs: 2, md: 8 },
           }}
         >
-          {name}
+          {title}
         </Typography>
 
         <Stack

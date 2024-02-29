@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Pagination, { paginationClasses } from '@mui/material/Pagination';
 
-import { IPostItem } from 'src/types/blog';
+import { CreateTodoInput } from "src/API";
 
 import { PostItemSkeleton } from './post-skeleton';
 import PostItemHorizontal from './post-item-horizontal';
@@ -9,7 +9,7 @@ import PostItemHorizontal from './post-item-horizontal';
 // ----------------------------------------------------------------------
 
 type Props = {
-  posts: IPostItem[];
+  posts: CreateTodoInput[];
   loading?: boolean;
 };
 

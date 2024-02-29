@@ -1,16 +1,15 @@
 'use client';
 
 import { Amplify } from 'aws-amplify';
+import { useState, useEffect } from 'react';
 import { generateClient } from 'aws-amplify/api';
 import { getCurrentUser } from 'aws-amplify/auth';
-import { useState, useEffect } from 'react';
 
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 
 import { paths } from 'src/routes/paths';
 import { RouterLink } from 'src/routes/components';
-
 
 import { CreateTodoInput } from 'src/API';
 import { listTodos } from 'src/graphql/queries';
