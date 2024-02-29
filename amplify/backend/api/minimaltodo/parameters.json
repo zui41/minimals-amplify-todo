@@ -1,0 +1,6 @@
+{
+  "AppSyncApiName": "minimaltodo",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2024-02-28T11:38:12.267Z"
+}

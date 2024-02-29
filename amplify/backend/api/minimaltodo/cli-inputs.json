@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "minimaltodo",
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 30,
+      "apiKeyExpirationDate": "2024-03-29T11:37:59.140Z",
+      "keyDescription": "da2-f7hkkctqs5b2zjvfmhicbfcire"
+    },
+    "conflictResolution": {},
+    "additionalAuthTypes": []
+  }
+}
