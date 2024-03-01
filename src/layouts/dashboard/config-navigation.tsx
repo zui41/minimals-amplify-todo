@@ -57,19 +57,6 @@ export function useNavData() {
         subheader: t('management'),
         items: [
 
-          // BLOG
-          {
-            title: t('blog'),
-            path: paths.dashboard.post.root,
-            icon: ICONS.blog,
-            children: [
-              { title: t('list'), path: paths.dashboard.post.root },
-              { title: t('details'), path: paths.dashboard.post.demo.details },
-              { title: t('create'), path: paths.dashboard.post.new },
-              { title: t('edit'), path: paths.dashboard.post.demo.edit },
-            ],
-          },
-
           // TODO
           {
             title: t('todo'),

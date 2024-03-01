@@ -150,7 +150,6 @@ export const paths = {
       root: `${ROOTS.DASHBOARD}/post`,
       new: `${ROOTS.DASHBOARD}/post/new`,
       details: (title: string) => `${ROOTS.DASHBOARD}/post/${paramCase(title)}`,
-      edit: (title: string) => `${ROOTS.DASHBOARD}/post/${paramCase(title)}/edit`,
       demo: {
         details: `${ROOTS.DASHBOARD}/post/${paramCase(MOCK_TITLE)}`,
         edit: `${ROOTS.DASHBOARD}/post/${paramCase(MOCK_TITLE)}/edit`,
