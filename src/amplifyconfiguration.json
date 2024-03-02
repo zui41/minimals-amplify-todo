@@ -1,13 +1,13 @@
 {
   "aws_project_region": "ap-northeast-1",
-  "aws_appsync_graphqlEndpoint": "https://7yo7gaxywzadxdsnm77k7s7zui.appsync-api.ap-northeast-1.amazonaws.com/graphql",
+  "aws_appsync_graphqlEndpoint": "https://jwe4kisxh5bjrazkecgwtyvjbi.appsync-api.ap-northeast-1.amazonaws.com/graphql",
   "aws_appsync_region": "ap-northeast-1",
   "aws_appsync_authenticationType": "API_KEY",
-  "aws_appsync_apiKey": "da2-f7hkkctqs5b2zjvfmhicbfcire",
-  "aws_cognito_identity_pool_id": "ap-northeast-1:c8658db7-1719-4d9c-aa14-8b0eaa50783f",
+  "aws_appsync_apiKey": "da2-lwicwjrqavesleaf6gvm3iilr4",
+  "aws_cognito_identity_pool_id": "ap-northeast-1:c21d5e07-ece5-4bc0-acc8-7b8741361bbe",
   "aws_cognito_region": "ap-northeast-1",
-  "aws_user_pools_id": "ap-northeast-1_wq5bCiA2n",
-  "aws_user_pools_web_client_id": "3il4063oat4qaos1k6ffs5t5u8",
+  "aws_user_pools_id": "ap-northeast-1_XIy2Zzx66",
+  "aws_user_pools_web_client_id": "u2uuhveo75b0ctphpkj9tnooe",
   "oauth": {},
   "aws_cognito_username_attributes": [
     "EMAIL"
