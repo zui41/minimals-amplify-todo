@@ -149,6 +149,7 @@ export const paths = {
     post: {
       root: `${ROOTS.DASHBOARD}/post`,
       new: `${ROOTS.DASHBOARD}/post/new`,
+      edit: (title: string) => `${ROOTS.DASHBOARD}/post/${paramCase(title)}/edit`,
       details: (title: string) => `${ROOTS.DASHBOARD}/post/${paramCase(title)}`,
       demo: {
         details: `${ROOTS.DASHBOARD}/post/${paramCase(MOCK_TITLE)}`,
@@ -158,7 +159,6 @@ export const paths = {
     todo: {
       root: `${ROOTS.DASHBOARD}/todo`,
       new: `${ROOTS.DASHBOARD}/todo/new`,
-      edit: (title: string) => `${ROOTS.DASHBOARD}/post/${paramCase(title)}/edit`,
     },
     order: {
       root: `${ROOTS.DASHBOARD}/order`,

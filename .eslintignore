@@ -24,3 +24,4 @@ src/setupTests.ts
 amplify-codegen-temp/models/models
 
 /src/aws-exports.js
+/src/ui-components/*
