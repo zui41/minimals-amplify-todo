@@ -114,7 +114,7 @@ export default function PostItemHorizontal({ post }: Props) {
         <MenuItem
           onClick={() => {
             popover.onClose();
-            handleDeleteTodo(id);
+            handleDeleteTodo(id || '');
           }}
         >
           <Iconify icon="solar:check-square-linear" />
